@@ -4,7 +4,7 @@ import Posts from "./Posts";
 
 const Blog = () => {
   return (
-    <div>
+    <>
       <header>
         <nav>
           <ul>
@@ -18,7 +18,7 @@ const Blog = () => {
         </nav>
       </header>
       <Posts />
-    </div>
+    </>
   );
 };
 
