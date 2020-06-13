@@ -8,8 +8,8 @@ const Headers = () => {
       <nav>
         <ul>
           <li>
-            <NavLink activeClassName="my-active" to="/" exact>
-              Home
+            <NavLink activeClassName="my-active" to="/posts">
+              Posts
             </NavLink>
           </li>
           <li>
