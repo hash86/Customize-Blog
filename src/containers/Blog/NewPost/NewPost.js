@@ -9,7 +9,6 @@ class NewPost extends Component {
     title: "",
     content: "",
     author: "Max",
-    submitted: false,
   };
   componentDidMount() {
     console.log("match", this.props.match.url);
@@ -23,12 +22,11 @@ class NewPost extends Component {
     };
     axios.post("/posts", data).then((response) => {
       console.log(response);
-      this.setState({ submitted: true });
+      this.props.history.replace("/posts");
     });
   };
 
   render() {
-    if (this.state.submitted) return <Redirect to="/" />;
     return (
       <div className="NewPost">
         <h1>Add a Post</h1>
