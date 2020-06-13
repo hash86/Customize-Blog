@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "./style.css";
 
 const Headers = () => {
   return (
@@ -7,10 +8,14 @@ const Headers = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink activeClassName="my-active" to="/" exact>
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/new-post">New Post</Link>
+            <NavLink activeClassName="my-active" to="/new-post">
+              New Post
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -1,0 +1,28 @@
+header nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  width: 100%;
+  text-align: center;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+header nav ul li a:hover,
+header nav ul li a:active {
+  color: orangered;
+}
+
+header a.my-active {
+  color: rebeccapurple;
+  text-decoration: underline;
+  font-weight: bold;
+}
