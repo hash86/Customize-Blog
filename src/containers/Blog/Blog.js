@@ -1,14 +1,18 @@
 import React from "react";
 import "./Blog.css";
 import Posts from "./Posts";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import Headers from "../../components/Headers";
+import NewPost from "./NewPost/NewPost";
 
-const Blog = () => {
+const Blog = (props) => {
   return (
     <div>
-      <Route path="/" component={Headers} />
-      <Route path="/" exact component={Posts} />
-      <Route path="/new-post" render={() => <div>New post</div>} />
+      <Headers />
+      <Switch>
+        <Route path="/" exact component={Posts} />
+        <Route path="/new-post" component={NewPost} />
+      </Switch>
     </div>
   );
 };
