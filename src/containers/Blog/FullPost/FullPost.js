@@ -9,6 +9,7 @@ class FullPost extends Component {
     id: null,
   };
   componentDidMount() {
+    console.log("this.props", this.props);
     if (this.props.match.params.id) {
       console.log(this.props.match.params.id);
       this.setState({ id: this.props.match.params.id });

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import axios from "../../../axios";
 import Post from "../../../components/Post/Post";
-
+import { Route } from "react-router-dom";
+import FullPost from "../FullPost/FullPost";
 class Posts extends Component {
   state = {
     posts: [],
@@ -47,8 +48,13 @@ class Posts extends Component {
         );
       });
     }
-
-    return <section className="Posts">{posts}</section>;
+    const { match } = this.props;
+    return (
+      <div>
+        <section className="Posts">{posts}</section>
+        <Route path={`${match.url}/:id`} component={FullPost} />
+      </div>
+    );
   }
 }
 

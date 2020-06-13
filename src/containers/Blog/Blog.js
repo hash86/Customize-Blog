@@ -12,8 +12,7 @@ const Blog = (props) => {
       <Headers />
       <Switch>
         <Route path="/new-post" component={NewPost} />
-        <Route path="/posts" component={Posts} exact />
-        <Route path="/posts/:id" component={FullPost} />
+        <Route path="/posts" component={Posts} />
         <Redirect from="/" to="/posts" exact />
       </Switch>
     </div>
