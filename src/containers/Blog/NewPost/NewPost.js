@@ -42,7 +42,7 @@ class NewPost extends Component {
           value={this.state.content}
           onChange={(event) => this.setState({ content: event.target.value })}
         />
-        <label>Author1</label>
+        <label>Author</label>
         <select
           value={this.state.author}
           onChange={(event) => this.setState({ author: event.target.value })}
